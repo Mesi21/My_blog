@@ -9,8 +9,14 @@ RSpec.describe 'Posts', type: :request do
     end
     it 'checks the correct response status, template and placeholder text' do
       expect(response).to have_http_status(200)
+    end
+
+    it 'checks the correct response status, template and placeholder text' do
       expect(response).to render_template('index')
-      expect(response.body).to include('for all posts')
+    end
+
+    it 'checks the correct response status, template and placeholder text' do
+      expect(response.body).to include('Title')
     end
   end
 
@@ -26,8 +32,16 @@ RSpec.describe 'Posts', type: :request do
     it 'shows the specific of one post' do
       get '/users/1/posts/1'
       expect(response).to have_http_status(200)
+    end
+
+    it 'shows the specific of one post' do
+      get '/users/1/posts/1'
       expect(response).to render_template('show')
-      expect(response.body).to include('one particular post')
+    end
+
+    it 'shows the specific of one post' do
+      get '/users/1/posts/1'
+      expect(response.body).to include('Back')
     end
   end
 end
