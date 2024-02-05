@@ -67,6 +67,11 @@ RSpec.describe 'posts#index', type: :feature do
     expect(page).to have_selector(:link_or_button, 'View post')
   end
 
+  it 'should redirect to the post show page through the View post button' do
+    click_link(href: user_post_path(first_user, post1))
+    expect(page).to have_current_path(user_post_path(first_user, post1.id))
+  end
+
   it 'should display a pagination button' do
     expect(page).to have_button('Pagination')
   end
