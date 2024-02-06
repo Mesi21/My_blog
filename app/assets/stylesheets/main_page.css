@@ -6,12 +6,18 @@ h5 {
 }
 
 body {
-  padding: 20px;
   background-color: #171a21;
 }
 
-#navbar {
+.navbar {
   width: 100%;
+}
+
+.current_user_name_notice {
+  width: 100;
+  color: #00f33d;
+  text-align: end;
+  padding: 20px;
 }
 
 .all-users {

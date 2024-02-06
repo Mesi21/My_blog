@@ -1,7 +1,7 @@
 <section class='all-users'>
   <section class='d-flex flex-column'>
     <h1 class='shadow'>ALL OUR BLOGERS</h1>
-    <%= link_to 'Add new post logged in as current user', new_user_post_path(current_user), data: {turbo: false}, class: 'btn btn-sm btn-primary', id: 'addPost' %>
+    <%= link_to 'Add new post', new_user_post_path(current_user), data: {turbo: false}, class: 'btn btn-sm btn-primary', id: 'addPost' %>
   </section>
   <% @users.each do |user| %>
     <%= render partial: 'user_box', locals: {user:user} %>
