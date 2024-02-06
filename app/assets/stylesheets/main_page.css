@@ -14,7 +14,7 @@ body {
 }
 
 .current_user_name_notice {
-  width: 100;
+  width: 100%;
   color: #00f33d;
   text-align: end;
   padding: 20px;
