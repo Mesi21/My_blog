@@ -49,6 +49,7 @@ gem 'sassc-rails'
 # gem "image_processing", "~> 1.2"
 gem 'bootstrap', '~> 5.1'
 gem 'bootstrap_form', '~> 5.4'
+gem 'cancancan'
 gem 'faker'
 gem 'jquery-rails', '~> 4.4'
 gem 'rails-controller-testing'
