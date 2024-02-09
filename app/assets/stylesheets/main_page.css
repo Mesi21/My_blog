@@ -6,8 +6,18 @@ h5 {
 }
 
 body {
-  padding: 20px;
   background-color: #171a21;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.current_user_name_notice {
+  width: 100%;
+  color: #00f33d;
+  text-align: end;
+  padding: 20px;
 }
 
 .all-users {
@@ -99,4 +109,22 @@ body {
   color: #fff;
   background-color: #617073;
   border-radius: 10px;
+}
+
+#sign-up-page,
+#login-page {
+  width: 60%;
+  margin: 10px auto;
+  padding: 50px 0;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  align-items: center;
+  background-color: #617073;
+  color: #dfdbdb;
+}
+
+#btn-login {
+  width: 100%;
 }
