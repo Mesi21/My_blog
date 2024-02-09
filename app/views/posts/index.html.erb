@@ -17,6 +17,9 @@
         <%= link_to 'View post', user_post_path(@user, p), class: 'btn btn-view' %>
         <p>Comments: <%= p.comments_counter %></p>
         <p>Likes: <%= p.likes_counter %></p>
+        <% if p.author_id == current_user.id || current_user.role == 'admin' %>
+          <%= button_to 'Delete Post', user_post_path(p.author, p), method: :delete, class: 'btn btn-danger' %>
+        <% end %>
       </li>
       <li>
         <% p.last_five_comments.each do |c| %>
