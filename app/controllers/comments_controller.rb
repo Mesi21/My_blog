@@ -26,7 +26,6 @@ class CommentsController < ApplicationController
       @comment_to_destroy.destroy
       flash[:notice] = 'Comment deleted succesfully'
     end
-    @allComments.update_comments_counter
     redirect_to user_post_path(@user)
   end
 

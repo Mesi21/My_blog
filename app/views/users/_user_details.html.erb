@@ -8,7 +8,7 @@
     <li class="list-group-item"><%= p.text.truncate(90) %></li>
     <li class="list-group-item d-flex flex-row" id="lks">
       <%= link_to 'See this post', user_post_path(@user, p), class: 'btn btn-view', id: 'btn-view-post' %>
-      <p>Comments: <%= p.comments_counter %></p>
+      <p>Comments: <%= p.comments.count %></p>
       <p>Likes: <%= p.likes_counter %></p>
     </li>
   <% end %>

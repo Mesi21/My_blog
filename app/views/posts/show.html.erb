@@ -3,7 +3,7 @@
       <li class="list-group-item">
         <h5><strong><%= @post.title.capitalize %></strong> by <%= @user.name %></h5>
         <div class="d-flex flex-row" id="statistics">            
-          <p>Comments: <%= @post.comments_counter %></p>
+          <p>Comments: <%= @post.comments.count %></p>
           <p>Likes: <%= @post.likes_counter %></p>
         </div>
       </li>
