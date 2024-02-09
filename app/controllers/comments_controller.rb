@@ -8,11 +8,7 @@ class CommentsController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
-    @comment = current_user.comments.new(
-      text: comment_params,
-      user_id: current_user.id,
-      post_id: @post.id
-    )
+    @comment = current_user.comments.new(comment_params)
     @comment.post_id = @post.id
     @comment.update_comments_counter
     if @comment.save
@@ -22,9 +18,22 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @user = current_user
+    # @post = Post.find(params[:post_id])
+    @comment_to_destroy = Comment.find(params[:id])
+
+    if @comment_to_destroy.user == @user
+      @comment_to_destroy.destroy
+      flash[:notice] = 'Comment deleted succesfully'
+    end
+    
+    redirect_to user_post_path(@user)
+  end
+
   private
 
   def comment_params
-    params.require(:comment).permit(:text)[:text]
+    params.require(:comment).permit(:text)
   end
 end
