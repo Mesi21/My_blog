@@ -54,6 +54,7 @@ gem 'faker'
 gem 'jquery-rails', '~> 4.4'
 gem 'rails-controller-testing'
 gem 'rspec-rails'
+gem 'rswag'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 group :development, :test do
