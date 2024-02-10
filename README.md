@@ -136,12 +136,23 @@ To run tests, run the following command:
   rspec spec
 ```
 
-## 👥 Author<a name="authors" id="authors></a>
+## 👥 <a name="authors" id="authors">Authors</a>
 
 👤 **Molnar Emese**
   - GitHub: [@Mesi21](https://github.com/Mesi21)
   - Twitter: [@buksimesi21](https://twitter.com/buksimesi21)  
   - LinkedIn: [LinkedIn] (https://www.linkedin.com/in/emesemesimolnar/)
+
+   👤 **Collins Akorda**
+
+- GitHub: [@firstpj](https://github.com/firstpj)
+- Twitter: [@AkordaC](https://twitter.com/AkordaC)
+- LinkedIn: [Collins Akorda](https://www.linkedin.com/in/collins-akorda-bb46b2232/)
+
+ 👤 **Aladdin Alsalem**
+
+- GitHub: [@Aladdin](https://github.com/AlaaAlsalem)
+- LinkedIn: [Aladdin](https://www.linkedin.com/in/aladdin-alsalem/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

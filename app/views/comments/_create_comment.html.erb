@@ -1,8 +1,8 @@
 <section class="container mt-5 p-2 bio">
-<%= bootstrap_form_with(url: "/posts/#{@post.id}/comments", scope: :comment, local: true) do |f| %>
+<%= bootstrap_form_with(url: post_comments_path(@post.id), scope: :comment, local: true) do |f| %>
     <%= f.label :text, "Add a comment", class: "form-label fs-6" %><br>
     <%= f.text_area :text, size:"50x5", class: "form-control", placeholder: "Add comment...", required: true %>
     <br>
-    <%= f.submit "Add comment", data: {disable_with: "Adding..."}, class: "btn btn-primary my-3" %>
+    <%= f.submit "Add comment", class: "btn btn-primary my-3" %>
   <% end %>
 </section>
