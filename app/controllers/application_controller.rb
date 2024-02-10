@@ -6,7 +6,7 @@ class ApplicationController < ActionController::API
   helper_method :current_user
   def after_sign_in_path_for(_resource)
     users_path
-  end
+ 
 
   protected
 
