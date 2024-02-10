@@ -14,6 +14,14 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :new, :destroy]
     resources :likes, only: [:create]
   end
-
+  namespace :api do
+    namespace :v1 do
+      resources :users do
+        resources :posts, only: [:index] do
+         resources :comments, only: [:index, :create]
+        end
+      end
+    end
+  end
   get "up" => "rails/health#show", as: :rails_health_check
 end
