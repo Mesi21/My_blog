@@ -5,12 +5,14 @@ class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments)
+    json_response(@posts)
   end
 
   def show
     @user = User.includes(posts: :comments).find(params[:user_id])
     @post = Post.find(params[:id])
     @posts = @user.posts
+    json_response(@post)
   end
 
   def new
